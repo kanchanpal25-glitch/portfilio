@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kanchan Pal – Aspiring Full Stack Web Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ffffff;--surface:#f6f8fb;--ink:#14213d;--muted:#4f5d73;--line:#dbe2ec;--accent:#1f4e79;--accent-ink:#ffffff;--mark:#1f4e79;
+--head:"Bricolage Grotesque","Trebuchet MS",sans-serif;--body:"Instrument Sans","Segoe UI",Arial,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1726;--surface:#16233a;--ink:#e8eef8;--muted:#9fb0c8;--line:#2a3b58;--accent:#7fb0ff;--accent-ink:#0e1726;--mark:#7fb0ff}}
+:root[data-theme="dark"]{--bg:#0e1726;--surface:#16233a;--ink:#e8eef8;--muted:#9fb0c8;--line:#2a3b58;--accent:#7fb0ff;--accent-ink:#0e1726;--mark:#7fb0ff}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--body)}
+a{color:var(--accent)}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+header.top{border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:16px;flex-wrap:wrap}
+.top b{font:700 20px var(--head);color:var(--accent)}
+.top nav{display:flex;gap:20px;flex-wrap:wrap}
+.top nav a{color:var(--muted);text-decoration:none;font-weight:500}
+.top nav a:hover{color:var(--ink)}
+.hero{background:linear-gradient(135deg,#1f4e79,#0f2f4f);color:#fff;border-radius:12px;padding:56px 40px 60px;margin:24px 0 8px}
+.hero h1{font:700 clamp(40px,8vw,76px)/1.05 var(--head);letter-spacing:-.025em;margin:0 0 16px}
+.hero h1 span{display:inline}
+.hero p.role{font:500 clamp(18px,2.6vw,24px)/1.35 var(--head);color:#8fe0ea;margin:0 0 16px;max-width:40ch}
+.hero p.sub{color:#d6e3f2;max-width:56ch;margin:0 0 32px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 22px;border-radius:6px;font-weight:600;text-decoration:none;border:2px solid var(--accent)}
+.btn.main{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent)}
+.hero .btn.main{background:#fff;color:#1f4e79;border-color:#fff}.hero .btn.ghost{color:#fff;border-color:#fff}
+h2::after{content:"";display:block;width:48px;height:4px;border-radius:2px;background:#0e8a9a;margin-top:10px}
+.layer{border-left:6px solid var(--c)}.layer h3{color:var(--c)}
+.tags li{border-color:var(--c);background:color-mix(in srgb,var(--c) 10%,var(--bg))}
+.project{border-top:5px solid #0e8a9a}.edu{border-left:6px solid #0e8a9a}
+.layer.have h3 small,.layer.learn h3 small{color:var(--muted)}
+.btn.main:hover{opacity:.9}
+
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font:700 clamp(28px,4vw,40px)/1.15 var(--head);margin:0 0 12px;letter-spacing:-.02em}
+.lead{color:var(--muted);max-width:60ch;margin:0 0 36px}
+.about p{max-width:62ch;margin:0 0 16px}
+.stack{display:grid;gap:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface)}
+.layer{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:20px 24px;border-bottom:1px solid var(--line)}
+.layer:last-child{border-bottom:0}
+.layer h3{font:700 18px var(--head);margin:0}
+.layer h3 small{display:block;font:500 13px var(--body);margin-top:2px}
+.layer.have h3 small{color:var(--accent)}
+.layer.learn h3 small{color:var(--muted)}
+.layer.learn{background:var(--bg)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.tags li{padding:3px 12px;border:1px solid var(--line);border-radius:4px;font-size:15px;background:var(--bg)}
+.project{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:32px}
+.project h3{font:700 28px var(--head);margin:0 0 4px}
+.project .tech{color:var(--muted);font-style:italic;margin:0 0 16px}
+.project ul{margin:0 0 24px;padding-left:20px;max-width:62ch}
+.project li{margin-bottom:6px}
+.edu{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:24px 28px}
+.edu h3{font:700 20px var(--head);margin:0 0 4px}
+.edu p{margin:0;color:var(--muted)}
+.edu .yrs{font:700 20px var(--head);color:var(--accent)}
+.soft{margin-top:28px;color:var(--muted)}
+.soft b{color:var(--ink)}
+.contact a.mail{font:700 clamp(22px,4.5vw,40px)/1.2 var(--head);word-break:break-all;letter-spacing:-.02em}
+.contact p{margin:0 0 10px}
+.links{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+footer{padding:32px 0 48px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+@media print{section,.layer,.project,.edu,.hero{break-inside:avoid}h2{break-after:avoid}section{padding:40px 0}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+@media (max-width:640px){.layer{grid-template-columns:1fr;gap:10px}.project{padding:22px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <b>Kanchan Pal</b>
+  <nav aria-label="Main"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main>
+<div class="hero">
+  <h1><span>Kanchan</span> <span>Pal</span></h1>
+  <p class="role">BCA Student | Aspiring Full Stack Web Developer</p>
+  <p class="sub">I build responsive websites with HTML, CSS and JavaScript, and I’m learning React, Node.js and MongoDB to take them full stack. Open to internships and entry-level roles.</p>
+  <div class="btns">
+    <a class="btn main" href="#contact">Get in touch</a>
+    <a class="btn ghost" href="https://kanchanpal25-glitch.github.io/Quiz-App/" target="_blank" rel="noopener">Try my Quiz App</a>
+  </div>
+</div>
+
+<section id="about" class="about">
+  <h2>About me</h2>
+  <p>I’m a 2nd-year BCA student at Eternal University, Baru Sahib, Sirmaur (H.P.), based in Uttar Pradesh.</p>
+  <p>I have hands-on experience with HTML, CSS and JavaScript, and I’ve deployed a live web project on GitHub Pages. Right now I’m learning React, Node.js and MongoDB so I can build complete applications, from interface to database.</p>
+  <p>I’m looking for an internship or entry-level opportunity where I can apply what I know and keep growing as a developer.</p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <p class="lead">Organised the way a full stack app is built, from the screen the user sees down to where it’s hosted.</p>
+  <div class="stack">
+    <div class="layer have" style="--c:#2f6db5"><h3>Frontend<small>Hands-on experience</small></h3>
+      <ul class="tags"><li>HTML5</li><li>CSS3</li><li>Flexbox</li><li>Grid</li><li>Responsive design</li><li>Animations</li><li>Sass</li><li>Tailwind CSS</li><li>Bootstrap</li><li>JavaScript (ES6+)</li><li>Async/Await</li><li>Fetch API</li><li>DOM</li><li>Local Storage</li></ul></div>
+    <div class="layer learn" style="--c:#0e8a9a"><h3>React<small>Currently learning</small></h3>
+      <ul class="tags"><li>Components</li><li>Props &amp; State</li><li>Hooks</li><li>React Router</li><li>Context API</li><li>Redux Toolkit</li><li>React Hook Form</li><li>Axios</li><li>Vite</li></ul></div>
+    <div class="layer learn" style="--c:#3f7f9e"><h3>Backend<small>Currently learning</small></h3>
+      <ul class="tags"><li>Node.js</li><li>Express.js</li><li>REST APIs</li><li>Middleware</li><li>MVC</li><li>JWT auth</li><li>bcrypt</li><li>CORS</li><li>Multer</li><li>Nodemailer</li><li>Socket.io (basics)</li><li>Helmet</li></ul></div>
+    <div class="layer learn" style="--c:#5a6fb0"><h3>Database<small>Currently learning</small></h3>
+      <ul class="tags"><li>MongoDB</li><li>Mongoose</li><li>Aggregation</li><li>Indexing</li><li>MySQL / PostgreSQL (basics)</li></ul></div>
+    <div class="layer have" style="--c:#2b7a78"><h3>Tools &amp; deployment<small>Day to day</small></h3>
+      <ul class="tags"><li>Git</li><li>GitHub</li><li>Postman</li><li>VS Code</li><li>npm</li><li>Chrome DevTools</li><li>Jest (basics)</li><li>Vercel</li><li>Netlify</li><li>Render</li><li>Railway</li><li>MongoDB Atlas</li></ul></div>
+  </div>
+  <p class="soft"><b>Soft skills:</b> problem solving, teamwork, communication, time management, quick learner. <b>Languages:</b> Hindi, English.</p>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="project">
+    <h3>Quiz App</h3>
+    <p class="tech">HTML, CSS, JavaScript, Git, GitHub Pages</p>
+    <ul>
+      <li>An interactive quiz web app where users test their knowledge with multiple-choice questions.</li>
+      <li>The interface is built with HTML and styled with CSS. The quiz logic is written in JavaScript.</li>
+      <li>Version controlled on GitHub and deployed live using GitHub Pages.</li>
+    </ul>
+    <div class="btns">
+      <a class="btn main" href="https://kanchanpal25-glitch.github.io/Quiz-App/" target="_blank" rel="noopener">Open live demo</a>
+      <a class="btn ghost" href="https://github.com/kanchanpal25-glitch/Quiz-App" target="_blank" rel="noopener">View code</a>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="edu">
+    <div><h3>Bachelor of Computer Applications (BCA)</h3><p>Eternal University, Baru Sahib, Sirmaur (H.P.) · 2nd year, pursuing</p></div>
+    <div class="yrs">2025 – 2028 (expected)</div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p class="lead">Have an internship or an entry-level role in mind? Send me a message.</p>
+  <p><a class="mail" href="mailto:kanchanpal25@navgurukul.org">kanchanpal25@navgurukul.org</a></p>
+  <p>Phone: <a href="tel:+916307109347">+91 6307109347</a> · Uttar Pradesh, India</p>
+  <div class="links">
+    <a class="btn ghost" href="https://www.linkedin.com/in/kanchan-pal-521415390/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn ghost" href="https://github.com/kanchanpal25-glitch" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</section>
+</main>
+
+<footer>© 2026 Kanchan Pal</footer>
+</div>
+</body>
+</html>
